@@ -7,13 +7,6 @@
       "email": "lost0719@163.com"
     }
   ],
-  "repositories": {
-    "packagist": {
-      "type": "composer",
-      "url": "https://packagist.phpcomposer.com"
-    },
-    "packagist.org": false
-  },
   "autoload": {
     "psr-4": {
       "Ywnsyage\\Clickhouse\\": "src"
