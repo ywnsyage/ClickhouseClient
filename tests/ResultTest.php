@@ -1,16 +1,16 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Exceptions\ResultException;
-use Tinderbox\Clickhouse\Query\QueryStatistic;
-use Tinderbox\Clickhouse\Query\Result;
+use Ywnsyage\Clickhouse\Exceptions\ResultException;
+use Ywnsyage\Clickhouse\Query\QueryStatistic;
+use Ywnsyage\Clickhouse\Query\Result;
 
 /**
- * @covers \Tinderbox\Clickhouse\Query\Result
- * @use \Tinderbox\Clickhouse\Query\QueryStatistic
- * @use \Tinderbox\Clickhouse\Exceptions\ResultException
+ * @covers \Ywnsyage\Clickhouse\Query\Result
+ * @use \Ywnsyage\Clickhouse\Query\QueryStatistic
+ * @use \Ywnsyage\Clickhouse\Exceptions\ResultException
  */
 class ResultTest extends TestCase
 {

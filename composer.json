@@ -1,20 +1,27 @@
 {
-  "name": "the-tinderbox/clickhouse-php-client",
-  "description": "Clickhouse client over HTTP",
+  "name": "ywnsyage/clickhouse-php-client",
+  "description": "Clickhouse client over HTTP and MySQL",
   "authors": [
     {
-      "name": "FacedSID",
-      "email": "ay@imagespark.ru"
+      "name": "ywnsyage",
+      "email": "lost0719@163.com"
     }
   ],
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    },
+    "packagist.org": false
+  },
   "autoload": {
     "psr-4": {
-      "Tinderbox\\Clickhouse\\": "src"
+      "Ywnsyage\\Clickhouse\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tinderbox\\Clickhouse\\": "tests"
+      "Ywnsyage\\Clickhouse\\": "tests"
     }
   },
   "require": {
@@ -35,6 +42,7 @@
     "test": "phpunit --coverage-text --colors=never"
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "secure-http": false
   }
 }

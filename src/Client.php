@@ -1,13 +1,14 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
-use Tinderbox\Clickhouse\Common\File;
-use Tinderbox\Clickhouse\Common\Format;
-use Tinderbox\Clickhouse\Interfaces\FileInterface;
-use Tinderbox\Clickhouse\Interfaces\TransportInterface;
-use Tinderbox\Clickhouse\Query\Result;
-use Tinderbox\Clickhouse\Transport\HttpTransport;
+use Ywnsyage\Clickhouse\Common\File;
+use Ywnsyage\Clickhouse\Common\Format;
+use Ywnsyage\Clickhouse\Interfaces\FileInterface;
+use Ywnsyage\Clickhouse\Interfaces\TransportInterface;
+use Ywnsyage\Clickhouse\Query\Result;
+use Ywnsyage\Clickhouse\Transport\HttpTransport;
+use Ywnsyage\Clickhouse\Transport\MysqlTransport;
 
 /**
  * Client.
@@ -45,8 +46,8 @@ class Client
     /**
      * Client constructor.
      *
-     * @param \Tinderbox\Clickhouse\ServerProvider                     $serverProvider
-     * @param \Tinderbox\Clickhouse\Interfaces\TransportInterface|null $transport
+     * @param \Ywnsyage\Clickhouse\ServerProvider                     $serverProvider
+     * @param \Ywnsyage\Clickhouse\Interfaces\TransportInterface|null $transport
      */
     public function __construct(
         ServerProvider $serverProvider,
@@ -63,13 +64,13 @@ class Client
      */
     protected function createTransport()
     {
-        return new HttpTransport();
+        return new MysqlTransport();
     }
 
     /**
      * Sets transport.
      *
-     * @param \Tinderbox\Clickhouse\Interfaces\TransportInterface|null $transport
+     * @param \Ywnsyage\Clickhouse\Interfaces\TransportInterface|null $transport
      */
     protected function setTransport(TransportInterface $transport = null)
     {
@@ -227,13 +228,17 @@ class Client
      * @param FileInterface[] $files
      * @param array           $settings
      *
-     * @return \Tinderbox\Clickhouse\Query\Result
+     * @return \Ywnsyage\Clickhouse\Query\Result
      */
     public function readOne(string $query, array $files = [], array $settings = []): Result
     {
+        //print_r($query);
         $query = $this->createQuery($this->getServer(), $query, $files, $settings);
-
+        //print_r(['readOne_query' => $query]);exit();
+        //print_r($this->transport);
+        //print_r($query->getFiles());
         $result = $this->getTransport()->read([$query], 1);
+        //print_r($result);
 
         return $result[0];
     }
@@ -248,12 +253,13 @@ class Client
      */
     public function read(array $queries, int $concurrency = 5): array
     {
+
         foreach ($queries as $i => $query) {
             if (!$query instanceof Query) {
                 $queries[$i] = $this->guessQuery($query);
             }
         }
-
+        //print_r($queries);exit();
         return $this->getTransport()->read($queries, $concurrency);
     }
 
@@ -332,12 +338,12 @@ class Client
     /**
      * Creates query instance from specified arguments.
      *
-     * @param \Tinderbox\Clickhouse\Server $server
+     * @param \Ywnsyage\Clickhouse\Server $server
      * @param string                       $sql
      * @param array                        $files
      * @param array                        $settings
      *
-     * @return \Tinderbox\Clickhouse\Query
+     * @return \Ywnsyage\Clickhouse\Query
      */
     protected function createQuery(
         Server $server,
@@ -353,7 +359,7 @@ class Client
      *
      * @param array $query
      *
-     * @return \Tinderbox\Clickhouse\Query
+     * @return \Ywnsyage\Clickhouse\Query
      */
     protected function guessQuery(array $query): Query
     {

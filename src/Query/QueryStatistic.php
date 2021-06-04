@@ -1,8 +1,8 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Query;
+namespace Ywnsyage\Clickhouse\Query;
 
-use Tinderbox\Clickhouse\Exceptions\QueryStatisticException;
+use Ywnsyage\Clickhouse\Exceptions\QueryStatisticException;
 
 /**
  * Query statistic contains three metrics:.
@@ -107,7 +107,7 @@ class QueryStatistic
      *
      * @param string $name
      *
-     * @throws \Tinderbox\Clickhouse\Exceptions\QueryStatisticException
+     * @throws \Ywnsyage\Clickhouse\Exceptions\QueryStatisticException
      *
      * @return mixed
      */

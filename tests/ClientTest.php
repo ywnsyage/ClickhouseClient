@@ -1,22 +1,22 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\FileFromString;
-use Tinderbox\Clickhouse\Common\Format;
-use Tinderbox\Clickhouse\Common\ServerOptions;
-use Tinderbox\Clickhouse\Common\TempTable;
-use Tinderbox\Clickhouse\Exceptions\ClusterException;
-use Tinderbox\Clickhouse\Exceptions\ServerProviderException;
-use Tinderbox\Clickhouse\Interfaces\TransportInterface;
-use Tinderbox\Clickhouse\Query\QueryStatistic;
-use Tinderbox\Clickhouse\Query\Result;
+use Ywnsyage\Clickhouse\Common\FileFromString;
+use Ywnsyage\Clickhouse\Common\Format;
+use Ywnsyage\Clickhouse\Common\ServerOptions;
+use Ywnsyage\Clickhouse\Common\TempTable;
+use Ywnsyage\Clickhouse\Exceptions\ClusterException;
+use Ywnsyage\Clickhouse\Exceptions\ServerProviderException;
+use Ywnsyage\Clickhouse\Interfaces\TransportInterface;
+use Ywnsyage\Clickhouse\Query\QueryStatistic;
+use Ywnsyage\Clickhouse\Query\Result;
 
 /**
- * @covers \Tinderbox\Clickhouse\Client
- * @use \Tinderbox\Clickhouse\Exceptions\ClientException
- * @use \Tinderbox\Clickhouse\Exceptions\ClusterException
+ * @covers \Ywnsyage\Clickhouse\Client
+ * @use \Ywnsyage\Clickhouse\Exceptions\ClientException
+ * @use \Ywnsyage\Clickhouse\Exceptions\ClusterException
  */
 class ClientTest extends TestCase
 {

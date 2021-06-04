@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Support;
+namespace Ywnsyage\Clickhouse\Support;
 
 use GuzzleHttp\Psr7\NoSeekStream;
 use Psr\Http\Message\StreamInterface;

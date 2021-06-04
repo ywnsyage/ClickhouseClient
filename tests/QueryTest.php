@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\File;
-use Tinderbox\Clickhouse\Common\Format;
+use Ywnsyage\Clickhouse\Common\File;
+use Ywnsyage\Clickhouse\Common\Format;
 
 /**
- * @covers \Tinderbox\Clickhouse\Query
+ * @covers \Ywnsyage\Clickhouse\Query
  */
 class QueryTest extends TestCase
 {

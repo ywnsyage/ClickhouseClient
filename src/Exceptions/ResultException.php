@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Exceptions;
+namespace Ywnsyage\Clickhouse\Exceptions;
 
 /**
  * @codeCoverageIgnore

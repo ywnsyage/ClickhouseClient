@@ -1,9 +1,9 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Interfaces;
+namespace Ywnsyage\Clickhouse\Interfaces;
 
-use Tinderbox\Clickhouse\Query;
-use Tinderbox\Clickhouse\Query\Result;
+use Ywnsyage\Clickhouse\Query;
+use Ywnsyage\Clickhouse\Query\Result;
 
 /**
  * Interface describes transport.

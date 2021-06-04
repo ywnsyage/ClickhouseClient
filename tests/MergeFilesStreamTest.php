@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\MergedFiles;
+use Ywnsyage\Clickhouse\Common\MergedFiles;
 
 /**
- * @covers \Tinderbox\Clickhouse\Common\AbstractFile
- * @covers \Tinderbox\Clickhouse\Common\MergedFiles
+ * @covers \Ywnsyage\Clickhouse\Common\AbstractFile
+ * @covers \Ywnsyage\Clickhouse\Common\MergedFiles
  */
 class MergeFilesStreamTest extends TestCase
 {

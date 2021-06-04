@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\File;
+use Ywnsyage\Clickhouse\Common\File;
 
 /**
- * @covers \Tinderbox\Clickhouse\Common\AbstractFile
- * @covers \Tinderbox\Clickhouse\Common\File
+ * @covers \Ywnsyage\Clickhouse\Common\AbstractFile
+ * @covers \Ywnsyage\Clickhouse\Common\File
  */
 class FileTest extends TestCase
 {

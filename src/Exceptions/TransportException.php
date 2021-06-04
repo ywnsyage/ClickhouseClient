@@ -1,10 +1,10 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Exceptions;
+namespace Ywnsyage\Clickhouse\Exceptions;
 
 use GuzzleHttp\Exception\RequestException;
-use Tinderbox\Clickhouse\Query;
-use Tinderbox\Clickhouse\Server;
+use Ywnsyage\Clickhouse\Query;
+use Ywnsyage\Clickhouse\Server;
 
 /**
  * @codeCoverageIgnore

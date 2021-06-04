@@ -1,14 +1,14 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\ServerOptions;
-use Tinderbox\Clickhouse\Exceptions\ClusterException;
-use Tinderbox\Clickhouse\Exceptions\ServerProviderException;
+use Ywnsyage\Clickhouse\Common\ServerOptions;
+use Ywnsyage\Clickhouse\Exceptions\ClusterException;
+use Ywnsyage\Clickhouse\Exceptions\ServerProviderException;
 
 /**
- * @covers \Tinderbox\Clickhouse\ServerProvider
+ * @covers \Ywnsyage\Clickhouse\ServerProvider
  */
 class ServerProviderTest extends TestCase
 {

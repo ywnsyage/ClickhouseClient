@@ -1,15 +1,15 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\ServerOptions;
-use Tinderbox\Clickhouse\Exceptions\ClusterException;
+use Ywnsyage\Clickhouse\Common\ServerOptions;
+use Ywnsyage\Clickhouse\Exceptions\ClusterException;
 
 /**
- * @covers \Tinderbox\Clickhouse\Cluster
- * @use \Tinderbox\Clickhouse\Exceptions\ClusterException
- * @use \Tinderbox\Clickhouse\Common\ServerOptions
+ * @covers \Ywnsyage\Clickhouse\Cluster
+ * @use \Ywnsyage\Clickhouse\Exceptions\ClusterException
+ * @use \Ywnsyage\Clickhouse\Common\ServerOptions
  */
 class ClusterTest extends TestCase
 {

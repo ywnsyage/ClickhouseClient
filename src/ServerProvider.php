@@ -1,8 +1,8 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
-use Tinderbox\Clickhouse\Exceptions\ServerProviderException;
+use Ywnsyage\Clickhouse\Exceptions\ServerProviderException;
 
 /**
  * Provides server from cluster, or just standalone server to perform queries.

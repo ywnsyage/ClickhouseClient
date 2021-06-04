@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Common;
+namespace Ywnsyage\Clickhouse\Common;
 
 /**
  * Container to server options.

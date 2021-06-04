@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use function GuzzleHttp\Psr7\stream_for;
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Support\CcatStream;
+use Ywnsyage\Clickhouse\Support\CcatStream;
 
 /**
- * @covers \Tinderbox\Clickhouse\Support\CcatStream
+ * @covers \Ywnsyage\Clickhouse\Support\CcatStream
  */
 class CcatStreamTest extends TestCase
 {

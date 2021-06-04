@@ -1,8 +1,8 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
-use Tinderbox\Clickhouse\Common\ServerOptions;
+use Ywnsyage\Clickhouse\Common\ServerOptions;
 
 /**
  * Alone server credentials.
@@ -59,7 +59,7 @@ class Server
      * @param string                                          $database
      * @param string|null                                     $username
      * @param string|null                                     $password
-     * @param \Tinderbox\Clickhouse\Common\ServerOptions|null $options
+     * @param \Ywnsyage\Clickhouse\Common\ServerOptions|null $options
      */
     public function __construct(
         string $host,
@@ -82,7 +82,7 @@ class Server
      *
      * @param string $host
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \Ywnsyage\Clickhouse\Server
      */
     public function setHost(string $host): self
     {
@@ -106,7 +106,7 @@ class Server
      *
      * @param string $port
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \Ywnsyage\Clickhouse\Server
      */
     public function setPort(string $port): self
     {
@@ -130,7 +130,7 @@ class Server
      *
      * @param string|null $database
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \Ywnsyage\Clickhouse\Server
      */
     public function setDatabase(string $database = null): self
     {
@@ -154,7 +154,7 @@ class Server
      *
      * @param string|null $username
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \Ywnsyage\Clickhouse\Server
      */
     public function setUsername(string $username = null): self
     {
@@ -178,7 +178,7 @@ class Server
      *
      * @param string|null $password
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \Ywnsyage\Clickhouse\Server
      */
     public function setPassword(string $password = null): self
     {
@@ -202,9 +202,9 @@ class Server
      *
      * If no options provided, will use default options
      *
-     * @param \Tinderbox\Clickhouse\Common\ServerOptions|null $options
+     * @param \Ywnsyage\Clickhouse\Common\ServerOptions|null $options
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \Ywnsyage\Clickhouse\Server
      */
     public function setOptions(ServerOptions $options = null): self
     {
@@ -220,7 +220,7 @@ class Server
     /**
      * Sets default options.
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \Ywnsyage\Clickhouse\Server
      */
     protected function setDefaultOptions(): self
     {
@@ -232,7 +232,7 @@ class Server
     /**
      * Returns options.
      *
-     * @return \Tinderbox\Clickhouse\Common\ServerOptions
+     * @return \Ywnsyage\Clickhouse\Common\ServerOptions
      */
     public function getOptions(): ServerOptions
     {

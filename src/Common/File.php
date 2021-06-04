@@ -1,10 +1,10 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Common;
+namespace Ywnsyage\Clickhouse\Common;
 
 use GuzzleHttp\Psr7\Stream;
 use Psr\Http\Message\StreamInterface;
-use Tinderbox\Clickhouse\Interfaces\FileInterface;
+use Ywnsyage\Clickhouse\Interfaces\FileInterface;
 
 class File extends AbstractFile implements FileInterface
 {

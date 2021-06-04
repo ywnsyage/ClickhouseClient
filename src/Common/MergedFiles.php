@@ -1,11 +1,11 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Common;
+namespace Ywnsyage\Clickhouse\Common;
 
 use GuzzleHttp\Psr7\Stream;
 use Psr\Http\Message\StreamInterface;
-use Tinderbox\Clickhouse\Interfaces\FileInterface;
-use Tinderbox\Clickhouse\Support\CcatStream;
+use Ywnsyage\Clickhouse\Interfaces\FileInterface;
+use Ywnsyage\Clickhouse\Support\CcatStream;
 
 class MergedFiles extends File implements FileInterface
 {

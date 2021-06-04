@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 /**
  * Query instance.
@@ -24,7 +24,7 @@ class Query
     /**
      * Server to process query.
      *
-     * @var \Tinderbox\Clickhouse\Server
+     * @var \Ywnsyage\Clickhouse\Server
      */
     protected $server;
 
@@ -38,7 +38,7 @@ class Query
     /**
      * Query constructor.
      *
-     * @param \Tinderbox\Clickhouse\Server $server
+     * @param \Ywnsyage\Clickhouse\Server $server
      * @param string                       $query
      * @param array                        $files
      * @param array                        $settings
@@ -74,7 +74,7 @@ class Query
     /**
      * Returns server to process query.
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \Ywnsyage\Clickhouse\Server
      */
     public function getServer(): Server
     {

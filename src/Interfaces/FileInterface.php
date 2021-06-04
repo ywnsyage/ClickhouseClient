@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Interfaces;
+namespace Ywnsyage\Clickhouse\Interfaces;
 
 use Psr\Http\Message\StreamInterface;
 

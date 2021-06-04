@@ -1,21 +1,21 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\File;
-use Tinderbox\Clickhouse\Common\FileFromString;
-use Tinderbox\Clickhouse\Common\Format;
-use Tinderbox\Clickhouse\Common\MergedFiles;
-use Tinderbox\Clickhouse\Common\TempTable;
-use Tinderbox\Clickhouse\Exceptions\TransportException;
-use Tinderbox\Clickhouse\Transport\HttpTransport;
+use Ywnsyage\Clickhouse\Common\File;
+use Ywnsyage\Clickhouse\Common\FileFromString;
+use Ywnsyage\Clickhouse\Common\Format;
+use Ywnsyage\Clickhouse\Common\MergedFiles;
+use Ywnsyage\Clickhouse\Common\TempTable;
+use Ywnsyage\Clickhouse\Exceptions\TransportException;
+use Ywnsyage\Clickhouse\Transport\HttpTransport;
 
 /**
- * @covers \Tinderbox\Clickhouse\Transport\HttpTransport
+ * @covers \Ywnsyage\Clickhouse\Transport\HttpTransport
  */
 class HttpTransportTest extends TestCase
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace Ywnsyage\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\ServerOptions;
+use Ywnsyage\Clickhouse\Common\ServerOptions;
 
 /**
- * @covers \Tinderbox\Clickhouse\Common\ServerOptions
+ * @covers \Ywnsyage\Clickhouse\Common\ServerOptions
  */
 class ServerOptionsTest extends TestCase
 {

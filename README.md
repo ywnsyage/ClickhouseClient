@@ -23,16 +23,16 @@ Client works with alone server and cluster. Also, client can make async select a
 ## Alone server
 
 ```php
-$server = new Tinderbox\Clickhouse\Server('127.0.0.1', '8123', 'default', 'user', 'pass');
-$serverProvider = (new Tinderbox\Clickhouse\ServerProvider())->addServer($server);
+$server = new Ywnsyage\Clickhouse\Server('127.0.0.1', '8123', 'default', 'user', 'pass');
+$serverProvider = (new Ywnsyage\Clickhouse\ServerProvider())->addServer($server);
 
-$client = new Tinderbox\Clickhouse\Client($serverProvider);
+$client = new Ywnsyage\Clickhouse\Client($serverProvider);
 ```
 
 ## Cluster
 
 ```php
-$testCluster = new Tinderbox\Clickhouse\Cluster('cluster-name', [
+$testCluster = new Ywnsyage\Clickhouse\Cluster('cluster-name', [
     'server-1' => [
         'host' => '127.0.0.1',
         'port' => '8123',
@@ -40,10 +40,10 @@ $testCluster = new Tinderbox\Clickhouse\Cluster('cluster-name', [
         'user' => 'user',
         'password' => 'pass'
     ],
-    'server-2' => new Tinderbox\Clickhouse\Server('127.0.0.1', '8124', 'default', 'user', 'pass')
+    'server-2' => new Ywnsyage\Clickhouse\Server('127.0.0.1', '8124', 'default', 'user', 'pass')
 ]);
 
-$anotherCluster = new Tinderbox\Clickhouse\Cluster('cluster-name', [
+$anotherCluster = new Ywnsyage\Clickhouse\Cluster('cluster-name', [
     [
         'host' => '127.0.0.1',
         'port' => '8125',
@@ -51,12 +51,12 @@ $anotherCluster = new Tinderbox\Clickhouse\Cluster('cluster-name', [
         'user' => 'user',
         'password' => 'pass'
     ],
-    new Tinderbox\Clickhouse\Server('127.0.0.1', '8126', 'default', 'user', 'pass')
+    new Ywnsyage\Clickhouse\Server('127.0.0.1', '8126', 'default', 'user', 'pass')
 ]);
 
-$serverProvider = (new Tinderbox\Clickhouse\ServerProvider())->addCluster($testCluster)->addCluster($anotherCluster);
+$serverProvider = (new Ywnsyage\Clickhouse\ServerProvider())->addCluster($testCluster)->addCluster($anotherCluster);
 
-$client = (new Tinderbox\Clickhouse\Client($serverProvider));
+$client = (new Ywnsyage\Clickhouse\Client($serverProvider));
 ```
 
 Before execute any query on cluster, you should provide cluster name and client will run all queries on specified cluster.
@@ -75,18 +75,18 @@ $client->using('server-2')->select('select * from table');
 ## Server tags
 
 ```php
-$firstServerOptionsWithTag = (new \Tinderbox\Clickhouse\Common\ServerOptions())->setTag('tag');
-$secondServerOptionsWithAnotherTag = (new \Tinderbox\Clickhouse\Common\ServerOptions())->setTag('another-tag');
+$firstServerOptionsWithTag = (new \Ywnsyage\Clickhouse\Common\ServerOptions())->setTag('tag');
+$secondServerOptionsWithAnotherTag = (new \Ywnsyage\Clickhouse\Common\ServerOptions())->setTag('another-tag');
 
-$server = new Tinderbox\Clickhouse\Server('127.0.0.1', '8123', 'default', 'user', 'pass', $firstServerOptionsWithTag);
+$server = new Ywnsyage\Clickhouse\Server('127.0.0.1', '8123', 'default', 'user', 'pass', $firstServerOptionsWithTag);
 
-$cluster = new Tinderbox\Clickhouse\Cluster('cluster', [
-    new Tinderbox\Clickhouse\Server('127.0.0.2', '8123', 'default', 'user', 'pass', $secondServerOptionsWithAnotherTag)
+$cluster = new Ywnsyage\Clickhouse\Cluster('cluster', [
+    new Ywnsyage\Clickhouse\Server('127.0.0.2', '8123', 'default', 'user', 'pass', $secondServerOptionsWithAnotherTag)
 ]);
 
-$serverProvider = (new Tinderbox\Clickhouse\ServerProvider())->addServer($server)->addCluster($cluster);
+$serverProvider = (new Ywnsyage\Clickhouse\ServerProvider())->addServer($server)->addCluster($cluster);
 
-$client = (new Tinderbox\Clickhouse\Client($serverProvider));
+$client = (new Ywnsyage\Clickhouse\Client($serverProvider));
 ```
 
 To use server with tag, you should call ```usingServerWithTag``` function before execute any query.
@@ -236,14 +236,14 @@ $client->write([
 ]);
 
 $client->writeFiles('table', ['date', 'column'], [
-    new Tinderbox\Clickhouse\Common\File('/file-1.csv'),
-    new Tinderbox\Clickhouse\Common\File('/file-2.csv')
+    new Ywnsyage\Clickhouse\Common\File('/file-1.csv'),
+    new Ywnsyage\Clickhouse\Common\File('/file-2.csv')
 ]);
 
 $client->insertFiles('table', ['date', 'column'], [
-    new Tinderbox\Clickhouse\Common\File('/file-1.tsv'),
-    new Tinderbox\Clickhouse\Common\File('/file-2.tsv')
-], Tinderbox\Clickhouse\Common\Format::TSV);
+    new Ywnsyage\Clickhouse\Common\File('/file-1.tsv'),
+    new Ywnsyage\Clickhouse\Common\File('/file-2.tsv')
+], Ywnsyage\Clickhouse\Common\Format::TSV);
 ```
 
 In case of `writeFiles` queries executes asynchronously. If you have butch of files and you want to insert them in one insert query, you can

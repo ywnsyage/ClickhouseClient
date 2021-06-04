@@ -10,7 +10,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Tinderbox Clickhouse Client Test Suite">
+        <testsuite name="Ywnsyage Clickhouse Client Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
