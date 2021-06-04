@@ -13,7 +13,7 @@ Client uses [Guzzle](https://github.com/guzzle/guzzle) for sending Http requests
 Composer
 
 ```bash
-composer require the-tinderbox/clickhouse-php-client
+composer require ywnsyage/clickhouse-php-client
 ```
 
 # Usage
