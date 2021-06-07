@@ -53,7 +53,6 @@ class MysqlClient
         if($res instanceof \mysqli_result){
             $result['data'] = mysqli_fetch_all($res, MYSQLI_ASSOC);
         }
-        print_r($result);exit();
         
         $this->conn->close();
         return $result;
