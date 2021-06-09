@@ -72,9 +72,8 @@ class MysqlTransport implements TransportInterface
     {
         // TODO: Implement write() method.
         $result = [];
-        $openedStreams = [];
 
-        foreach ($queries as $query) {
+        foreach ($queries as $index => $query) {
             /* @var Query $query */
             $server = $query->getServer();
             $res = $this->mysqlClient->build($server)->query($query->getQuery());
@@ -93,7 +92,6 @@ class MysqlTransport implements TransportInterface
     public function read(array $queries, int $concurrency = 5): array
     {
         // TODO: Implement read() method.
-        $openedStreams = [];
         $result = [];
         //print_r($queries);
         foreach ($queries as $index => $query) {

@@ -19,7 +19,8 @@
   },
   "require": {
     "php": "^7.1|^8.0",
-    "guzzlehttp/guzzle": "^6.0|^7.0"
+    "guzzlehttp/guzzle": "^6.0|^7.0",
+    "ext-mysqli": "*"
   },
   "bin": [
     "bin/ccat_linux",

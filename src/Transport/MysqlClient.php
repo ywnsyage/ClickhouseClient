@@ -49,6 +49,7 @@ class MysqlClient
         $res =  $this->conn->query($sql);
         if($res){
             $result['rows'] = $this->conn->affected_rows;
+            $result['data'] = [$res];
         }
         if($res instanceof \mysqli_result){
             $result['data'] = mysqli_fetch_all($res, MYSQLI_ASSOC);
