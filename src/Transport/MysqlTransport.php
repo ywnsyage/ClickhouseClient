@@ -51,7 +51,7 @@ class MysqlTransport implements TransportInterface
      *
      * @param MysqlClient|null $client
      */
-    protected function setClient(Client $client = null)
+    protected function setClient(MysqlClient $client = null)
     {
         if (is_null($client)) {
             $this->mysqlClient = $this->createMysqlClient();
@@ -77,13 +77,7 @@ class MysqlTransport implements TransportInterface
             /* @var Query $query */
             $server = $query->getServer();
             $res = $this->mysqlClient->build($server)->query($query->getQuery());
-            $statistic = new QueryStatistic(
-                $res['rows'] ?? 0,
-                0,
-                microtime(true),
-                null
-            );
-            $result[$index] = new Result($query, $res['data'], $statistic);
+            $result[$index][0] = !empty($res['rows']);
         }
 
         return $result;
@@ -97,16 +91,16 @@ class MysqlTransport implements TransportInterface
         foreach ($queries as $index => $query) {
             /* @var Query $query */
             $server = $query->getServer();
+            $start_time = microtime(true);
             $res = $this->mysqlClient->build($server)->query($query->getQuery());
-            
+            $end_time = microtime(true);
             $statistic = new QueryStatistic(
                 $res['rows'] ?? 0,
                 0,
-                microtime(true),
+                floatval(bcsub($end_time, $start_time, 3)),
                 null
             );
             $result[$index] = new Result($query, $res['data'], $statistic);
-            //var_dump($result[$index]);
         }
         return $result;
     }
