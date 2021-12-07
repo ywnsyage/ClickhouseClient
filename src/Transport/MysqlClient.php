@@ -38,6 +38,7 @@ class MysqlClient
     /**
      * @param $sql
      * @return array|bool
+     * @throws \Exception
      */
     public function query($sql)
     {
@@ -50,12 +51,16 @@ class MysqlClient
         if($res){
             $result['rows'] = $this->conn->affected_rows;
             $result['data'] = [$res];
+        }else{
+            $error = !empty($this->conn->error) ? $this->conn->error : 'clickhouse语句执行报错';
         }
         if($res instanceof \mysqli_result){
             $result['data'] = mysqli_fetch_all($res, MYSQLI_ASSOC);
         }
-        
         $this->conn->close();
+        if(!$res){
+            throw new \Exception($error);
+        }
         return $result;
     }
 
