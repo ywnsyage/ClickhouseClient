@@ -60,7 +60,7 @@ class Client
     /**
      * Creates default http transport.
      *
-     * @return HttpTransport
+     * @return MysqlTransport
      */
     protected function createTransport()
     {
